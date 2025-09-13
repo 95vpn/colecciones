@@ -71,6 +71,7 @@ namespace colecciones
             }
             */
 
+            /*
             LinkedList<int> numeros = new LinkedList<int>();
 
             foreach (int numero in new int[] { 10, 8, 6, 4, 2, 0 }) 
@@ -78,6 +79,7 @@ namespace colecciones
             {
                 numeros.AddFirst(numero);
             }
+            */
 
             /*
             foreach(int numero in numeros)
@@ -86,9 +88,40 @@ namespace colecciones
             }
             */
 
+            /*
+            numeros.Remove(5);
+
+            LinkedListNode<int> nodoImportante = new LinkedListNode<int>(15);
+
+            numeros.AddFirst(nodoImportante);
             for(LinkedListNode<int> nodo = numeros.First; nodo != null; nodo = nodo.Next)
             {
                 Console.WriteLine(nodo.Value); 
+            }
+            */
+
+            Queue<int> numeros = new Queue<int>();
+
+            // rellenando o agregando elementos a la cola
+
+            foreach(int numero in new int[5] {2, 4, 6, 8, 10})
+            {
+                numeros.Enqueue(numero);
+            }
+
+            Console.WriteLine("recorriendo el queue");
+
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+
+            Console.WriteLine("eliminando elementos");
+            numeros.Dequeue();
+
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero);
             }
         }
     }
