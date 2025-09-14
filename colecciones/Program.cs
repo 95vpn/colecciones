@@ -100,6 +100,7 @@ namespace colecciones
             }
             */
 
+            /*
             Queue<int> numeros = new Queue<int>();
 
             // rellenando o agregando elementos a la cola
@@ -122,6 +123,47 @@ namespace colecciones
             foreach (var numero in numeros)
             {
                 Console.WriteLine(numero);
+            }
+            */
+
+            /*
+            Stack<int> numeros = new Stack<int>();
+
+            foreach (int numero in new int[5] { 2, 4, 6, 8, 10 })
+            {
+                numeros.Push(numero);
+            }
+
+            Console.WriteLine("Recorriendo el stack");
+
+            foreach (int numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+
+            Console.WriteLine("Eliminando elementos");
+
+            numeros.Pop();
+
+            foreach (int numero in numeros)
+            {
+                Console.WriteLine(numero);
+            }
+            */
+
+            Dictionary<string, int> edades = new Dictionary<string, int>();
+
+            edades.Add("jUAN", 18);
+
+            edades.Add("dIANDRA", 35);
+
+            edades["María"] = 25;
+
+            edades["Antonio"] = 29;
+
+            foreach(KeyValuePair<string, int> persona in edades)
+            {
+                Console.WriteLine("Nombre: " + persona.Key + " Edad: " + persona.Value);
             }
         }
     }
